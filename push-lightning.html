@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides" style="font-size: 180%">
+				<section>Push Notifications</section>
+				<section>We have a startup</section>
+				<section>Django, PostgreSQL</section>
+				<section>Users who have phones</section>
+				<section>Want to notify them of changes</section>
+				<section>There are iPhone users</section>
+				<section>There are Android users</section>
+				<section>Don't really care about the others (if they even exist)</section>
+				<section>We have iPhone and Android apps</section>
+				<section>Apple has APNS <br>(and APNS_SANDBOX)</section>
+				<section>Android has GCM</section>
+				<section>So how do we notify the users?</section>
+				<section>Phones have to ask for local tokens</section>
+				<section>These tokens identify the device to the push service</section>
+				<section>User logs in to the app,<br>so we know who they are</section>
+				<section>Background task sends the token to the server<br>(connection is authenticated to the user)</section>
+				<section>Now what?</section>
+				<section>Celery for asynchronous task execution</section>
+				<section>boto to talk to AWS SNS</section>
+				<section>SNS talks to both APNS and GCM</section>
+				<section>Webserver adds async task to register phone enpoint with SNS</section>
+				<section>SNS gives us a different token</section>
+				<section>Store this token against the user</section>
+				<section>change time</section>
+				<section>Some action by a user needs to be pushed out</section>
+				<section>Let's say<br>"Game cancelled"</section>
+				<section>Ideally this should make the phones go BING</section>
+				<section>View POST initiates async task</section>
+				<section>Celery worker picks up the task</section>
+				<section>Queries DB to find affected users</section>
+				<section>Get all SNS tokens for those users</section>
+				<section>Construct SNS payload</section>
+				<section>Send to each token</section>
+				<section>Phones go BING</section>
+				<section>Issues: there are many, perhaps I should have given a real talk</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
