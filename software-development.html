@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Software Development @ Canonical</title>
+
+		<meta name="author" content="Tim Penhey">
+		<meta name="description" content="Software development at Canonical.">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Software Development at Canonical</h1>
+					<h3>a.k.a. working from home</h3>
+					<p>
+						<small><a href="http://github.com/howbazaar">Tim Penhey</a> / <a href="http://twitter.com/howbazaar">@howbazaar</a></small>
+					</p>
+				</section>
+
+				<section>
+					<p>But first a plug...</p>
+				</section>
+
+				<section>
+					<h2>Code Craft</h2>
+					<p>We meet in Dunedin the first Tuesday of the month.</p>
+					<p>Meetings are organised on <a href="http://www.meetup.com/Code-Craft-Dunedin/">meetup.com</a>.</p>
+					<p>The mailing list is hosted on <a href="http://groups.google.com/group/codecraft-dunedin">groups.google.com/group/codecraft-dunedin</a>.</p>
+					<p>Let us know what you want to hear about.</p>
+				</section>
+
+
+				<section>
+					<h2>Meta</h2>
+					<p>This presentation uses <a href="http://lab.hakim.se/reveal-js">reveal.js</a>.</p>
+					<p>Also on github <a href="https://github.com/howbazaar/remote-work">howbazaar/slides</a>.</p>
+					<p>My new favourite way to write talks.</p>
+				</section>
+
+				<section>
+					<h2>About Canonical</h2>
+					<ul style="line-height: 2em">
+						<li>Founded in 2004 as nonameyet.com</li>
+						<li>Head office is in London, UK</li>
+						<li>Canonical has approximately 750 people</li>
+						<li>Over 80% of the employees work from home</li>
+						<li>Two divisions: Devices; and Cloud</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>About Tim</h2>
+					<ul style="line-height: 2em">
+						<li>Work for Canonical remotely</li>
+						<li>Been doing this for almost 10 years now</li>
+						<li>Working on Juju, application modelling and deployment tool</li>
+						<li>Team spans NZ, Australia, Dubai, Bulgaria, UK, Argentina, USA, and Canada</li>
+						<li>Manager is in the USA</li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="software-development/juju.png" style="width: 70%">
+				</section>
+
+				<section>
+					<h2>Juju</h2>
+
+					<p>Juju is an application and service modelling tool that enables you to quickly model, configure, deploy and manage applications in the cloud with only a few commands.</p> 
+					<p> Use it to deploy hundreds of preconfigured services, OpenStack, or your own code to any public or private cloud.</p>
+				</section>
+
+				<section>
+					<h2>Juju</h2>
+					<ul style="line-height: 2em">
+						<li>Approx 65 peopple: 16 UI Engineering, 17 Core Engineering, 14 QA, 12 Eco-systems, 12 Openstack charmers.</li>
+					  	<li>Open source Go project</li>
+						<li>github.com/juju/juju ~500k lines of Go</li>
+						<li>Other github.com/juju/ packages ~250k lines of Go</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Planning - Six monthly</h2>
+					<ul style="line-height: 2em">
+						<li>1 week sprint with stakeholders feature planning</li>
+						<li>1 week sprint with the team</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Feature Development</h2>
+					<ul style="line-height: 2em">
+						<li>We try to be agile</li>
+						<li>Start with a stakeholder driven "specification"
+							<ul>
+								<li>what the feature is</li>
+								<li>how it would be used</li>
+							</ul></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Feature Prioritisation</h2>
+					<ul style="line-height: 2em">
+						<li>Always more work than time</li>
+						<li>Agree at planning sprint as to cycle goals</li>
+						<li>Based on developer estimates</li>
+						<li>Always over-committed</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Mid-cycle checkpoint</h2>
+					<ul style="line-height: 2em">
+						<li>Another week long work meeting somewhere</li>
+						<li>Looks at:
+							<ul>
+								<li>what unplanned work was done</li>
+								<li>progress of agreed features</li>
+							</ul></li>
+						<li>Agree on new targets</li>
+					</ul>
+				</section>
+
+			<section>
+				<h2>Developing Features</h2>
+				<ul style="line-height: 2em">
+					<li>Break it down into codeable chunks</li>
+					<li>Rough estimates, most people are bad at this</li>
+					<li>Develop locally on your laptop</li>
+					<li>Always have tests</li>
+					<li>Code reviews</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Landing code</h2>
+				<ul style="line-height: 2em">
+					<li>All code is reviewed using github pull requests</li>
+					<li>Every PR must have tests supporting the change</li>
+					<li>Every PR must be approved by a core team member</li>
+					<li>No-one commits directly to master, a bot does it</li>
+					<li>Bot runs all core tests on ubuntu, subset on windows, race test and smoke test</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Pre-release testing</h2>
+				<ul style="line-height: 2em">
+					<li>We have a bunch of continuous integration tests</li>
+					<li>These tests cycle repeatedly taking tip of master</li>
+					<li>Failing tests get new bugs</li>
+					<li>All voting tests must pass for release</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Bugs</h2>
+				<p>poem about 99 bugs in the code</p>
+			</section>
+
+			<section>
+				<h2>Bugs</h2>
+				<ul style="line-height: 2em">
+					<li>All programs over a certain size have bugs</li>
+					<li>Ideally we don't want any</li>
+					<li>Need to prioritise bugs with features</li>
+				</ul>
+			</section>
+
+				<section>
+					<img src="software-development/work-from-home.jpg" style="width: 70%">
+				</section>
+
+				<section>
+					<img src="software-development/naked-lounge.jpg" style="width: 70%">
+				</section>
+
+
+				<section>
+					<h2>Reality</h2>
+					<ul style="line-height: 2em">
+						<li>Need "office" space</li>
+						<li>This is where you work most of the time</li>
+						<li>Flexi-time, 1.5 hour lunches for gym</li>
+						<li>Results driven not hours driven</li>
+					</ul>
+				</section>
+
+			<section>
+				<h2>My office</h2>
+				<img src="software-development/office.jpg" >
+			</section>
+
+			<section>
+				<h2>Working Hours</h2>
+				<ul style="line-height: 2em">
+					<li>Each person is expected to have predictable hours</li>
+					<li>Most people work 8 - 5, 9 - 6 or some variation</li>
+					<li>Very easy to overwork</li>
+					<li>Time in an office isn't all productive</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Communication</h2>
+				<ul style="line-height: 2em">
+					<li>IRC - old school, freenode and company private</li>
+					<li>Hangouts - 1:1 calls, and team calls</li>
+					<li>Twitter, Facebook, Google+</li>
+					<li>Phone conference when talking with customers</li>
+					<li>Oh, yeah, and heaps of e-mail</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Normal Days</h2>
+				<ul style="line-height: 2em">
+					<li>Mornings are when I catch up with Americans</li>
+					<li>Stand-up calls at 11:15am</li>
+					<li>Moved from manager back to more development</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Regular Calls</h2>
+				<ul style="line-height: 2em">
+					<li>Release call meetings</li>
+					<li>Cross team calls</li>
+					<li>Weekly 1 hour 1:1 call with my manager</li>
+					<li>Several calls with peers</li>
+				</ul>
+			</section>
+
+
+			<section>
+				<h2>Working...</h2>
+				<ul style="line-height: 2em">
+					<li>Calls each morning</li>
+					<li>Often other calls through the day</li>
+					<li>Keep on top of email</li>
+					<li>Be responsive on IRC</li>
+					<li>And add features or fix bugs</li>
+				</ul>
+			</section>
+
+
+			<section>
+				<h2>Master your tools</h2>
+				<ul style="line-height: 2em">
+					<li>Whichever editor you use, learn it well</li>
+					<li>Know git well enough to get yourself out of trouble</li>
+					<li>Command line tools are worth knowing, find, xargs, grep</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>When you get stuck</h2>
+				<p>Take the dog for a walk</p>
+				<img src="software-development/poodle-walk.jpg" style="width: 400px">
+			</section>
+
+			<section>
+				<h2>Worth noting</h2>
+				<p>Kids don't care who you are talking to</p>
+				<img src="software-development/interrupting.jpg" style="width: 600px">
+			</section>
+
+			<section>
+				<h2>It isn't for everyone</h2>
+				<ul style="line-height: 2em">
+					<li>Most your friends are virtual</li>
+					<li>Can feel lonely</li>
+					<li>Miss the water cooler chatter</li>
+					<li>Must have social life outside of work</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Questions?</h2>
+			</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
